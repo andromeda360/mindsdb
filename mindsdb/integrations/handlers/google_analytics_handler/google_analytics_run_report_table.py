@@ -21,12 +21,10 @@ from mindsdb.integrations.utilities.sql_utils import extract_comparison_conditio
 class RunReportTable(APITable):
 
     def __init__ (self, name: str, handler, **kwargs):
-        # print(f"=== HANDLER INIT DEBUG FOR REPORT TABLE ===")
         super().__init__(handler)
         self.handler : GoogleAnalyticsRunReportHandler = handler
         self.name = name
         self.property_id = self.handler.property_id
-        # print("=== END DEBUG FOR REPORT TABLE ===")
 
     def _run_report_request(self, dimensions, metrics, date_range, filter_expression, property_id):
         """
