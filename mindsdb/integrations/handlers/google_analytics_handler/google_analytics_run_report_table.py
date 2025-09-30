@@ -18,8 +18,6 @@ from mindsdb.integrations.libs.api_handler import APITable
 from google.analytics.data_v1beta.types import NumericValue
 from mindsdb.integrations.utilities.sql_utils import extract_comparison_conditions
 
-DEFAULT_SCOPE = ['https://www.googleapis.com/auth/analytics.readonly']
-
 class RunReportTable(APITable):
 
     def __init__ (self, name: str, handler, **kwargs):
